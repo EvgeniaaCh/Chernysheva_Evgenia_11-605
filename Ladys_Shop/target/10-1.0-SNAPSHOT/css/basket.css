@@ -1,0 +1,50 @@
+.good {
+    min-height: 100pt;
+    margin-bottom: 5pt;
+}
+.basket_item{
+    margin-right: 10pt;
+    float: left;
+}
+.basket {
+    min-height: 100pt;
+    margin: 30pt 10pt 5pt 20pt;
+}
+.basket_img{
+    margin-right: 10pt;
+    float: left;
+}
+.basket_good_name{
+    width: 30%;
+    margin-right: 15pt;
+    float: left;
+}
+.img_good {
+    height: 50pt;
+    width: 50pt;
+}
+.price{
+    margin-right: 15pt;
+    float: left;
+    width: 12%;
+}
+.quantity{
+    margin-right: 15pt;
+    float: left;
+}
+
+.select_quantity {
+    margin-right: 10pt;
+    float: left;
+}
+
+.link {
+    float: left;
+}
+
+.btn_delete{
+    text-decoration: none;
+    padding: 8pt 18pt;
+    font-size: medium;
+    background: #ed1c24;;
+}

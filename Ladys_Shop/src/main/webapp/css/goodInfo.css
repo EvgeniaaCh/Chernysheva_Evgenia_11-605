@@ -1,0 +1,39 @@
+.descr{
+    width: 50%;
+    float: left;
+    padding-bottom: 100pt;
+}
+.add_good{
+    width: 10%;
+    float: right;
+}
+.descr h3{
+    color: #333333;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    margin-bottom: 7pt;
+}
+.descr p{
+    margin: 0;
+    font-size: 1.4em;
+    color: #ED1C24;
+    line-height: 1.8em;
+}
+.information{
+    margin: 40pt 0 0 20pt;
+}
+.img_good_cont{
+    box-sizing: border-box;
+    margin-right: 5pt;
+    float: left;
+    width: 32%;
+}
+.img_good{
+    height: 230pt;
+    width: 230pt;
+}
+.btn_add{
+    background: #3366cc;
+    padding: 8pt 18pt;
+    font-size: larger;
+}

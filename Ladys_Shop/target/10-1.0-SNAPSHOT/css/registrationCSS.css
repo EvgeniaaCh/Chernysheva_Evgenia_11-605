@@ -1,0 +1,38 @@
+.inputform.error{
+    border-color:  red;
+}
+
+.registration{
+    width: 300pt;
+    margin: 0 auto;
+}
+.registration div{
+    padding: 5pt 0;
+}
+.registration label{
+    font-weight: normal;
+}
+.inputform{
+    width: 100%;
+    padding: 6pt;
+    border:1px solid;
+}
+#register-submit{
+    background: #3366cc;
+    padding: 8pt 18pt;
+    font-size: large;
+}
+.sky-form ul{
+    list-style:none;
+}
+.radio{
+    float: left;
+    margin-left: 15pt;
+}
+.sky-form{
+    height: 30pt;
+    margin: 0 0 5pt -40pt;
+}
+#input_container{
+    margin-top: 50pt;
+}

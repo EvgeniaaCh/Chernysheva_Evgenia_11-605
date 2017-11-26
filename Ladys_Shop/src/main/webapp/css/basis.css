@@ -1,0 +1,127 @@
+.error-message{
+    color: red;
+}
+body{
+    background: #eeeeee ;
+    margin: 0;
+}
+.header {
+    height: 50pt;
+    margin-bottom: 10pt;
+}
+.container{
+    margin: 0pt 50pt;
+    padding: 0 10pt;
+}
+.window{
+    min-height: 70%;
+}
+.clear-float{
+    clear: both !important;
+}
+/*-- header_top --*/
+.header_top{
+    min-height: 250px;
+    padding:10pt 0 5pt;
+}
+.logo {
+    float:left;
+}
+.top_right {
+    float: right;
+    color: #ffffff;
+    margin-top: 7pt;
+}
+
+.top_right ul li{
+    display: inline-block;
+    margin-right: 10pt;
+}
+.top_right ul li a{
+    text-align:center;
+    padding: 0px 4px;
+    text-transform:uppercase;
+    font-size:12px;
+    display:block;
+    color:#000000;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.top_right ul li a:hover{
+    color:#ed1c24;
+    text-decoration: none;
+}
+.top_left{
+    float: left;
+}
+.top_left h2{
+    text-transform:uppercase;
+    font-size:12px;
+    color:#ffffff;
+}
+.top_left h2 a{
+    color: #000000;
+    margin-right:10px;
+    padding: 6px 20px;
+    background: #ffcc33;
+    border:1px dotted;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.top_left h2 a:hover{
+    background: #ffffff;
+    text-decoration:none;
+}
+
+.head-bann{
+    height: auto;
+    background:#ff69b4;
+}
+
+.head-nav ul{
+    margin:0;
+    padding:0;
+}
+.head-nav ul li{
+    display:inline-block;
+}
+.btn_basket {
+    text-decoration: none;
+    background: #3366cc;
+    padding: 8pt 18pt;
+    font-size: medium;
+}
+.head-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    padding: 0.8em 1.4em;
+    display: block;
+}
+.check_table{
+    border: 2pt solid;
+    margin-bottom: 10pt;
+    width: 76%;
+}
+.check{
+    margin-top: 10%;
+    padding: 0 100pt;
+}
+.number-order{
+    text-align: center;
+    width: 20%;
+}
+.totalsum{
+    text-align: center;
+    width: 7%;
+}
+.date-order{
+    text-align: center;
+    width: 15%;
+}
