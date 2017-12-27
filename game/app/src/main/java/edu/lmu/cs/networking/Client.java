@@ -214,16 +214,16 @@ public class Client {
                     moveLocation(response, opponentPanel, 15, opponentIcon, false);
 
                 } else if (response.startsWith("DESTROYED")) {
-                    destroyedLocation(response, panel, 10, true);
+                    breakLocation(response, panel, 10, true);
 
                 } else if (response.startsWith("OPPONENT_DESTROYED")) {
-                    destroyedLocation(response, opponentPanel, 19, false);
+                    breakLocation(response, opponentPanel, 19, false);
 
                 } else if (response.startsWith("NOT_DESTROYED")) {
-                    notDestroyedLocation(response, panel, 14, true);
+                    notBreakLocation(response, panel, 14, true);
 
                 } else if (response.startsWith("OPPONENT_NOT_DESTROYED")) {
-                    notDestroyedLocation(response, opponentPanel, 23, false);
+                    notBreakLocation(response, opponentPanel, 23, false);
 
                 } else if (response.startsWith("THROW_INTO_THE_VOID")) {
                     throwIntoTheVoid(response, panel, 20, icon, true);
@@ -363,7 +363,7 @@ public class Client {
         }
     }
 
-    private void destroyedLocation(String response, Square[] board, int n, boolean current) {
+    private void breakLocation(String response, Square[] board, int n, boolean current) {
         String turn = response.substring(n);
         int location = direction(turn, current); //определяем координату по направлению
         board[location].setIcon(destroyed);
@@ -375,7 +375,7 @@ public class Client {
             messageLabel.setText("ПРОТИВНИК НЕ СМОГ УНИЧТОЖИТЬ СТЕНУ:  " + turn);
     }
 
-    private void notDestroyedLocation(String response, Square[] board, int n, boolean current) {
+    private void notBreakLocation(String response, Square[] board, int n, boolean current) {
         String turn = response.substring(n);
         int location = direction(turn, current); //определяем координату по направлению
         board[location].setIcon(granite);

@@ -24,10 +24,10 @@ public class Game {
 
         thisPlayer.setStartPosition(thisPlayer.locationDO);
         System.out.println(thisPlayer + " - " + thisPlayer.locationDO);
-        thisPlayer.setOtherStartPosition(thisPlayer.opponent.locationDO);
+        thisPlayer.changeStartPosition(thisPlayer.opponent.locationDO);
 
         thisPlayer = thisPlayer.opponent;
-        thisPlayer.setOtherStartPosition(thisPlayer.opponent.locationDO);
+        thisPlayer.changeStartPosition(thisPlayer.opponent.locationDO);
     }
 
     private void changePlayer() {
@@ -36,7 +36,7 @@ public class Game {
         thisPlayer.output.println("YOUR_MOVE");
     }
 
-    private boolean hasWinner(int location) throws NullPointerException, ArrayIndexOutOfBoundsException {
+    private boolean winner(int location) throws NullPointerException, ArrayIndexOutOfBoundsException {
         return panel[location].equals(thisPlayer.opponent);
     }
 
@@ -53,7 +53,7 @@ public class Game {
             return -1;
     }
 
-    private synchronized boolean validMove(Player player, String command, PrintWriter output) {
+    private synchronized boolean thisMove(Player player, String command, PrintWriter output) {
         if (player == thisPlayer) { //если сейчас ходит правильный игрок
             String turn = command.substring(5); //достаем направление
             int location = direction(turn); //определяем координату по направлению
@@ -112,7 +112,7 @@ public class Game {
         return false;
     }
 
-    private synchronized boolean validThrow(Player player, String command, PrintWriter output) {
+    private synchronized boolean thisThrow(Player player, String command, PrintWriter output) {
         if (player == thisPlayer) {
             String turn = command.substring(5); //достаем направление
             int location = direction(turn); //определяем координату по направлению
@@ -125,7 +125,7 @@ public class Game {
                     throw new ArrayIndexOutOfBoundsException();
                 }
 
-                if (hasWinner(location)) { //проверка на попадание
+                if (winner(location)) { //проверка на попадание
                     panel[location] = null;
                     output.println("VICTORY");
 
@@ -216,7 +216,7 @@ public class Game {
             this.opponent = opponent;
         }
 
-        void setOtherStartPosition(int location) {
+        void changeStartPosition(int location) {
             if (firstMove) {
                 panel[location] = thisPlayer.opponent;
                 output.println("OPPONENT_START");
@@ -261,12 +261,12 @@ public class Game {
                     String command = input.readLine();
                     if (command != null) {
                         if (command.startsWith("MOVE") && !wasMove) {
-                            if (!validMove(this, command, output)) {
+                            if (!thisMove(this, command, output)) {
                                 output.println("MESSAGE СЕЙЧАС НЕ ВАШ ХОД");
                             }
 
                         } else if (command.startsWith("BOMB")) {
-                            if (!validThrow(this, command, output)) {
+                            if (!thisThrow(this, command, output)) {
                                 output.println("MESSAGE СЕЙЧАС НЕ ВАШ ХОД");
                             }
 
